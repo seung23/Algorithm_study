@@ -18,6 +18,9 @@ for i in group:
 
 print(result)
 
+# for i in group 이 포인트!
+# for i in range()를 관성적으로 쓰지 말자.
+ 
 
 
     
