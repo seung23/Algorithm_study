@@ -37,3 +37,7 @@ htmlcov/
 # Misc
 *.log
 *.tmp
+
+# Input files
+input.txt
+
