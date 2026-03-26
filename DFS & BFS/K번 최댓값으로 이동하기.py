@@ -1,3 +1,7 @@
+import sys
+sys.stdin = open('input.txt', 'r')
+input = sys.stdin.readline
+
 from collections import deque
 
 n, k = map(int, input().split())
@@ -31,10 +35,10 @@ def bfs(sx, sy):
 for _ in range(k):
     candidates = bfs(sx, sy)
     if not candidates:
-        break  
+        break
+    
+    # 최댓값 기준, 행 작은 것, 열 작은 것 순으로 정렬
+    candidates.sort(key=lambda c: (-c[0], c[1], c[2]))
+    _, sx, sy = candidates[0]
 
-
-
-
-
-print(sx+1, sy+1)  
+print(sx+1, sy+1)
