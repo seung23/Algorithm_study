@@ -18,11 +18,21 @@ def rotate_90_manytime(arr, times):
         arr = rotate_90(arr)
     return arr
 
-arr1 = rotate_90_manytime(arr, 3)
+arr1 = rotate_90_manytime(arr, 1)
 
 for a in arr1:
     print(*a)
+print("___________\n")
+arr2 = rotate_90_manytime(arr, 2)
 
+for a in arr2:
+    print(*a)
+print("___________\n")
+arr3 = rotate_90_manytime(arr, 3)
+
+for a in arr3:
+    print(*a)
+print("___________\n")
 
 
 
