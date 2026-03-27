@@ -9,7 +9,6 @@ print("___________\n")
 
 #정사각형 배열의 특정 부분만 회전시키는 함수
 def partial_rotate_90(arr, start_n, start_m, length):
-    n = len(arr)
     new_arr = [row[:] for row in arr]  # 깊은 복사, [:]가 있으면 새로운 리스트를 반환
                                        # [:]가 없으면 얕은 복사여서 그대로 참조(원본값 변환 위험)
 
