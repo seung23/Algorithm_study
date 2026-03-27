@@ -42,3 +42,5 @@ htmlcov/
 input.txt
 test.py
 tempCodeRunnerFile.py
+
+*.pdf
