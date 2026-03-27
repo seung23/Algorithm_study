@@ -19,7 +19,6 @@ def rotated_180(arr):
             result[n-1-i][m-1-j] = arr[i][j]
     return result
 
-
 def rotated_270(arr):
     n = len(arr)
     m = len(arr[0])

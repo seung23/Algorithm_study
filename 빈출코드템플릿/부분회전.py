@@ -1,6 +1,6 @@
-arr = [[7 * j + i for i in range(1, 8)] for j in range(7)]  # (7n7) 행렬
+arr = [[7 * j + i for i in range(1, 8)] for j in range(7)]  # (7x7) 행렬
 
-start_n, start_m = 2, 3  # 행, 열
+start_n, start_m = 2, 3  # 부분회전을 시작하는 (행, 열)
 length = 3
 
 for a in arr:
@@ -12,11 +12,11 @@ def partial_rotate_90(arr, start_n, start_m, length):
     new_arr = [row[:] for row in arr]  # 깊은 복사, [:]가 있으면 새로운 리스트를 반환
                                        # [:]가 없으면 얕은 복사여서 그대로 참조(원본값 변환 위험)
 
-    for n in range(start_n, start_n + length):
-        for m in range(start_m, start_m + length):
-            on, om = n - start_n, m - start_m
+    for i in range(start_n, start_n + length):
+        for j in range(start_m, start_m + length):
+            on, om = i - start_n, j - start_m
             rn, rm = om, length - 1 - on
-            new_arr[start_n + rn][start_m + rm] = arr[n][m]
+            new_arr[start_n + rn][start_m + rm] = arr[i][j]
 
     return new_arr
 
